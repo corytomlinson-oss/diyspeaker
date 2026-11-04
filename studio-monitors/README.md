@@ -33,12 +33,13 @@ The PSU is Class I, so the IEC earth must be bonded to the chassis. Signal groun
 
 | Role | Part | Key specs | Price |
 |---|---|---|---|
-| Woofer | Dayton ND91-4 (3.5" full-range) | Fs 74 Hz, Qts 0.41, Vas 1.4 L, Xmax 4.6 mm, 82.4 dB at 1 W / 1 m, 30 W RMS | $27.98 |
+| Woofer | Peerless SLS-85S25CP04-04 (3.5" paper cone) | Fs 72.6 Hz, Qts 0.35, Vas 1.39 L, Xmax 4.5 mm, 83.3 dB at 1 W / 1 m, 86.0 dB at 2.83 V, 30 W RMS | $21.00 |
 | Tweeter | Dayton ND25FA-4 (1" soft dome) | Fs 1,350 Hz, Qts 1.56, 90 dB at 2.83 V, 20 W RMS, flat above 3 kHz | $11.49 |
 
 **Crossover:** 4th-order Linkwitz-Riley at about 2.5 to 3 kHz, set in DSPi. Start at 3 kHz. The 3.5" woofer will be near its limit at 2.5 kHz, and the tweeter's usable range starts at 2.5 kHz.
 
 **Previously considered:**
+- Dayton ND91-4 (3.5" full-range, $27.98): Very close on paper to the Peerless, but about $7 more per speaker. Replaced by the Peerless.
 - MAC-04 (4" midrange): Dropped for the 3.5" ND91-4. Its official datasheet was not accessible, and its Xmax (3 mm, from the overhang figure) was lower than the ND91-4's 4.6 mm.
 - SB12NRXF25-4 (4"): Discontinued from the standard range (OEM only, MOQ 100).
 - Tang Band W4-1720 (4"), Dayton SIG120-4 (4"), SB12PACR25-4 (4"): Viable, but larger than the reference box.
@@ -49,13 +50,13 @@ The PSU is Class I, so the IEC earth must be bonded to the chassis. Signal groun
 
 | Item | Cost |
 |---|---|
-| Woofer, ND91-4 | $27.98 |
+| Woofer, Peerless SLS-85S25CP04-04 | $21.00 |
 | Tweeter, ND25FA-4 | $11.49 |
 | Electronics (ADC, Pico 2, DAC, amp, PSU) | ~$84 |
 | Filament and misc. hardware (IEC inlet, RCA jack, wire, fasteners, damping) | ~$20–35 |
-| **Total** | **~$130–145** |
+| **Total** | **~$125–140** |
 
-For the pair: roughly $260 to $290 before shipping and tax. The filament and misc. line is an estimate.
+For the pair: roughly $250 to $280 before shipping and tax. The filament and misc. line is an estimate.
 
 ## Measurement gear (to purchase)
 
@@ -73,13 +74,15 @@ Prices are rough. Verify before purchase.
 
 - Design phase. Drivers and electronics locked in. Enclosure not yet designed.
 - No measurements yet.
-- WinISD not yet run for the ND91-4. Hand calculation at 1.5 L sealed: Qtc about 0.57, −3 dB about 103 Hz.
+- WinISD not yet run for the Peerless. Hand calculation at 1.5 L sealed: Qtc about 0.49, −3 dB about 101 Hz.
+- Waveguide for the tweeter is being considered for the baffle. Not designed yet.
 
 ## Open items
 
-1. WinISD sealed-box run at 1.5 L with the ND91-4 parameters.
+1. WinISD sealed-box run at 1.5 L with the Peerless parameters.
 2. CAD enclosure at about 165 × 114 × 127 mm, with the internal volume checked and the driver cutouts placed.
-3. Confirm the ND91-4 and ND25FA-4 cutout diameters from the official drawings. The ND25FA-4 is listed at Ø45 mm, and the ND91-4's cutout isn't confirmed.
+3. Confirm the Peerless and ND25FA-4 cutout diameters from the official drawings. The ND25FA-4 is listed at Ø45 mm. The Peerless drawing appears to show about Ø86.5 mm, which is hard to read and needs confirming. The Peerless is about 76 mm deep, so check that it leaves room for the amp and PSU inside the box.
+3a. Decide whether the tweeter gets a waveguide, and if so design it into the baffle, with time alignment in DSPi.
 4. Confirm the ND25FA-4 frequency response and the ND91-4 response in the box with measurements.
 5. Check the EPS-65 and PCM1808 board dimensions against the enclosure.
 6. TPA3116D2 input sensitivity and DSPi output gain, to avoid clipping.
@@ -87,6 +90,7 @@ Prices are rough. Verify before purchase.
 
 ## Sources
 
+- Peerless SLS-85S25CP04-04: Tymphany driver spec sheet (attached PDF, rev 1, 2017), Parts Express (price, $21 from user).
 - ND91-4: loudspeakerdatabase.com listing and Parts Express (price).
 - ND25FA-4: Parts Express listing (specs and price).
 - Passive Aggressive Mini kit (box size reference): Parts Express.
