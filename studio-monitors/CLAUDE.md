@@ -27,7 +27,7 @@ A DIY two-way active studio monitor built by Cory as a learning project, inspire
 ## Current state
 
 - Woofer: Peerless SLS-85S25CP04-04 (3.5" paper cone), $21.00. Datasheet on file. Back-ordered at the time of the decision.
-- Tweeter: Dayton ND25FA-4 (1" soft dome), $11.49.
+- Tweeter: open. Dayton ND25FA-4 ($11.49) is a placeholder. Looking for a tweeter better suited to a waveguide.
 - Crossover: LR4 at about 2.5 to 3 kHz, starting at 3 kHz, in DSPi.
 - Enclosure: sealed, 3D-printed, reference size about 165 × 114 × 127 mm, net volume target about 1.5 L.
 - Estimated cost: about $125 to $140 per speaker.
