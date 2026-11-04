@@ -34,9 +34,9 @@ The PSU is Class I, so the IEC earth must be bonded to the chassis. Signal groun
 | Role | Part | Key specs | Price |
 |---|---|---|---|
 | Woofer | Peerless SLS-85S25CP04-04 (3.5" paper cone) | Fs 72.6 Hz, Qts 0.35, Vas 1.39 L, Xmax 4.5 mm, 83.3 dB at 1 W / 1 m, 86.0 dB at 2.83 V, 30 W RMS | $21.00 |
-| Tweeter | Open. Placeholder: Dayton ND25FA-4 (1" soft dome) | Fs 1,350 Hz, Qts 1.56, 90 dB at 2.83 V, 20 W RMS, flat above 3 kHz | $11.49 |
+| Tweeter | Dayton ND25FN-4 (1" silk dome, faceplate-free) | Fs 1,350 Hz, Qts 1.56, 90 dB at 2.83 V, 20 W RMS, Ø41 mm cutout, 21 mm deep, smooth on-axis 2 to 10 kHz | $11.00 |
 
-The tweeter choice is open. Looking for a tweeter better suited to a waveguide. The ND25FA-4 stays in the cost and layout numbers as a placeholder.
+The tweeter is locked in for a baffle-mounted waveguide. Designed for custom mounting, so the front stays flat for the waveguide.
 
 **Crossover:** 4th-order Linkwitz-Riley at about 2.5 to 3 kHz, set in DSPi. Start at 3 kHz. The 3.5" woofer will be near its limit at 2.5 kHz, and the tweeter's usable range starts at 2.5 kHz.
 
@@ -53,12 +53,12 @@ The tweeter choice is open. Looking for a tweeter better suited to a waveguide. 
 | Item | Cost |
 |---|---|
 | Woofer, Peerless SLS-85S25CP04-04 | $21.00 |
-| Tweeter, ND25FA-4 | $11.49 |
-| Electronics (ADC, Pico 2, DAC, amp, PSU) | ~$84 |
+| Tweeter, ND25FN-4 | $11.00 |
+| Electronics (ADC, Pico 2, DAC, amp, PSU) | ~$52 |
 | Filament and misc. hardware (IEC inlet, RCA jack, wire, fasteners, damping) | ~$20–35 |
-| **Total** | **~$125–140** |
+| **Total** | **~$104–119** |
 
-For the pair: roughly $250 to $280 before shipping and tax. The filament and misc. line is an estimate.
+For the pair: roughly $210 to $240 before shipping and tax. An earlier version of this table counted the MAC-04 woofer twice, so the total was overstated by about $20 per speaker. This corrects it. The filament and misc. line is an estimate.
 
 ## Measurement gear (to purchase)
 
@@ -81,8 +81,8 @@ Prices are rough. Verify before purchase.
 
 ## Open items
 
-1. Choose the tweeter, favoring one better suited to a waveguide. Then update the crossover, cutout, and cost figures.
-2. WinISD sealed-box run at 1.5 L with the Peerless parameters.
+1. WinISD sealed-box run at 1.5 L with the Peerless parameters.
+1a. Design the baffle waveguide for the ND25FN-4: throat to dome, mouth size for a 2.5 to 3 kHz crossover, and mounting clips or plate.
 2. CAD enclosure at about 165 × 114 × 127 mm, with the internal volume checked and the driver cutouts placed.
 3. Confirm the Peerless and ND25FA-4 cutout diameters from the official drawings. The ND25FA-4 is listed at Ø45 mm. The Peerless drawing appears to show about Ø86.5 mm, which is hard to read and needs confirming. The Peerless is about 76 mm deep, so check that it leaves room for the amp and PSU inside the box.
 3a. Decide whether the tweeter gets a waveguide, and if so design it into the baffle, with time alignment in DSPi.
