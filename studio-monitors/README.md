@@ -82,6 +82,7 @@ Prices are rough. Verify before purchase.
 ## Open items
 
 1. WinISD sealed-box run at 1.5 L with the Peerless parameters.
+0a. Test the PCM1808 board's input filter (static and functional). Step-by-step guide: studio-monitors/pcm1808-board-test.md.
 1a. Design the baffle waveguide for the ND25FN-4: throat to dome, mouth size for a 2.5 to 3 kHz crossover, and mounting clips or plate.
 2. CAD enclosure at about 165 × 114 × 127 mm, with the internal volume checked and the driver cutouts placed.
 3. Confirm the Peerless and ND25FA-4 cutout diameters from the official drawings. The ND25FA-4 is listed at Ø45 mm. The Peerless drawing appears to show about Ø86.5 mm, which is hard to read and needs confirming. The Peerless is about 76 mm deep, so check that it leaves room for the amp and PSU inside the box.
