@@ -25,14 +25,11 @@ Status key: **Chosen** = decided, **Verify** = needs a check before ordering.
 | Bel Fuse 5HT 2-R, 2 A slow-blow, 5×20 mm, 250 V | 4 | Not checked | [Digi-Key 5923-5HT2-R-ND](https://www.digikey.com/en/products/detail/bel-fuse-inc/5ht-2-r/1008982) | Chosen. Two per speaker. |
 | IEC C14 power cord (US, 3-prong) | 2 | Not checked | Digi-Key or local | Verify |
 
-## Wiring and connectors (from Digi-Key)
+## Wiring and connectors (Digi-Key and Amazon)
 
 | Item | Qty | Notes | Status |
 |---|---|---|---|
-| JST VHR-3N housing (for PSU AC input) | 2 | Matches the PSU's B3P-VH connector | Verify the part number on Digi-Key |
-| JST VHR-4N housing (for PSU DC output) | 2 | Matches the PSU's B4P-VH connector | Verify |
-| JST SVH-21T-P1.1 crimp terminals | 14+ | 7 per speaker, plus spares | Verify |
-| JST crimp tool for SVH terminals | 1 | Needed for the terminals above | Verify |
+| JST VH cable assemblies, 3-position (PSU AC input) and 4-position (PSU DC output), 18 AWG | 4 (2 of each) | Pre-made leads from Amazon, so no crimping. Match the PSU's B3P-VH and B4P-VH connectors. | Verify length, wire gauge, and that they're VH series |
 | 18 AWG stranded wire, red, black, and green | 1 roll each | Mains (green earth), 24 V and ground runs | Verify |
 | Ring terminals for M3 screws (earth) | 4 | For PSU screws M1 and M2 | Verify |
 | Panel-mount RCA jack | 2 | One per speaker | Verify |
