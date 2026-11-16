@@ -4,7 +4,7 @@ Context for Claude working in this folder. Read this before making changes.
 
 ## What this project is
 
-A DIY two-way active studio monitor built by Cory as a learning project, inspired by the Genelec 4020C and kept as cheap as practical. Each speaker has its own PCM1808 ADC, Pico 2 running DSPi, PCM5102 DAC, TPA3116D2 class D amp, and EPS-65-24-C PSU. The enclosure is 3D-printed on a Bambu Lab X1C. The full design rationale is in README.md.
+A DIY two-way active studio monitor built by Cory as a learning project, inspired by the Genelec 4020C and kept as cheap as practical. Each speaker has its own PCM1808 ADC, Pico 2 running DSPi, PCM5102 DAC, TPA3116D2 class D amp, and Mean Well IRM-60-24ST PSU (Class II, screw terminals). The enclosure is 3D-printed on a Bambu Lab X1C. The full design rationale is in README.md.
 
 ## Hard constraints (do not change without asking)
 

@@ -19,19 +19,18 @@ Status key: **Chosen** = decided, **Verify** = needs a check before ordering.
 
 | Item | Qty | Price (approx.) | Where | Status |
 |---|---|---|---|---|
-| Mean Well EPS-65-24-C PSU (24 V, 2.71 A, enclosed) | 2 | $18.10 each (Digi-Key) | [Digi-Key 1866-1721-ND](https://www.digikey.com/en/products/detail/mean-well-usa-inc/EPS-65-24-C/7703204?s=N4IgTCBcDaIKIAcDOBaAbAVhWALCgxiALoC%2BQA) | Chosen |
+| Mean Well IRM-60-24ST PSU (24 V, 2.5 A, 60 W, screw terminals, Class II) | 2 | About $17.30 each (Master Electronics listing, USD) | Master Electronics (link not saved). Digi-Key 1866-3068-ND is listed with a 17-week lead time, so it is not the first choice. | Chosen. Datasheet on file. Verify stock and price before ordering. |
 | Traco Power TSR 3-2450N, 24 V to 5 V buck module (3 A) | 2 | $12.53 each (CAD, Digi-Key Canada) | [Digi-Key (Canada)](https://www.digikey.ca/en/products/detail/traco-power/TSR-3-2450N/25903120) | Chosen. Check the US Digi-Key page for USD pricing. |
-| Panel-mount IEC C14 inlet with switch and fuse holder, 1 to 2 mm panel | 2 | Not checked | Digi-Key: search "723W-BEL3BR51A" | Chosen. Datasheet on file. Verify the Digi-Key listing. |
+| Panel-mount IEC C14 inlet with switch and fuse holder, 1 to 2 mm panel (Qualtek/Mean Well 723W-BEL3BR51A) | 2 | Not checked | Digi-Key: search "723W-BEL3BR51A" | Chosen. Unchanged by the PSU switch: the speaker still needs a mains inlet, switch, and fuse holder. Datasheet on file. Verify the Digi-Key listing. |
 | Bel Fuse 5HT 2-R, 2 A slow-blow, 5×20 mm, 250 V | 4 | Not checked | [Digi-Key 5923-5HT2-R-ND](https://www.digikey.com/en/products/detail/bel-fuse-inc/5ht-2-r/1008982) | Chosen. Two per speaker. |
-| IEC C14 power cord (US, 3-prong) | 2 | Not checked | Digi-Key or local | Verify |
+| IEC C14 power cord (US, 3-prong) | 2 | Not checked | Digi-Key or local | Verify. The IRM-60 is Class II, so the cord's earth pin is not used by the PSU. A 3-prong cord is still the normal choice. |
 
-## Wiring and connectors (Digi-Key and Amazon)
+## Wiring and connectors
 
 | Item | Qty | Notes | Status |
 |---|---|---|---|
-| JST VH cable assemblies, 3-position (PSU AC input) and 4-position (PSU DC output), 18 AWG | 4 (2 of each) | Pre-made leads from Amazon, so no crimping. Match the PSU's B3P-VH and B4P-VH connectors. | Verify length, wire gauge, and that they're VH series |
-| 18 AWG stranded wire, red, black, and green | 1 roll each | Mains (green earth), 24 V and ground runs | Verify |
-| Ring terminals for M3 screws (earth) | 4 | For PSU screws M1 and M2 | Verify |
+| 18 AWG stranded wire, red, black, and green | 1 roll each | Mains live and neutral (inlet to PSU), 24 V and ground runs. Green is only needed if you bond the inlet's earth terminal to something. | Verify |
+| Ring or spade terminals for the IRM-60 screw terminals, sized for 18 AWG, with insulating sleeves | 1 kit | Mains L and N into the PSU, DC +24 V and −V out. | Verify |
 | Panel-mount RCA jack | 2 | One per speaker | Verify |
 | Shielded signal wire, 24 AWG | 1 roll | RCA to ADC, DAC to amp | Verify |
 | Spade terminals, 0.187" with insulating sleeves | 1 kit | Speaker connections | Verify |
@@ -42,8 +41,8 @@ Status key: **Chosen** = decided, **Verify** = needs a check before ordering.
 ## Not on Digi-Key, or needs a local source
 
 - Polyfill or fiberfill (damping), local hardware or craft store
-- M3 standoffs and screws, local hardware store
-- Mylar film insulator sheet, for the PSU mounting
+- M3 standoffs and screws, local hardware store (check the IRM-60 mounting holes and fit inside the box)
+- Insulating sheet (Mylar or similar) under the PSU, only if the mounting surface is conductive
 - 3D printing filament (PLA or PETG), about $5 to $10 per box
 - Cable gland or strain relief for the mains cable, optional
 
@@ -60,9 +59,11 @@ Status key: **Chosen** = decided, **Verify** = needs a check before ordering.
 ## Open checks before ordering
 
 1. PCM1808 module: confirm the input network on the board (see `pcm1808-board-test.md`).
-2. Digi-Key listing and stock for the 723W-BEL3BR51A inlet.
-3. US Digi-Key pricing for the TSR 3-2450N.
-4. Raspberry Pi Pico 2 source and price.
-5. Wire, connector, and crimp tool part numbers on Digi-Key.
-6. Peerless cutout diameter (drawing appears to show about Ø86.5 mm) and ND25FN-4 cutout (Ø41 mm per datasheet).
-7. Confirm 3D-printed panel or insert for the inlet (1 to 2 mm thick, required by the 723W).
+2. Source, stock, and USD price for the IRM-60-24ST (Master Electronics or another non-Digi-Key seller).
+3. Digi-Key listing and stock for the 723W-BEL3BR51A inlet.
+4. US Digi-Key pricing for the TSR 3-2450N.
+5. Raspberry Pi Pico 2 source and price.
+6. Wire and terminal part numbers (screw-terminal ferrules, 18 AWG).
+7. Peerless cutout diameter (drawing appears to show about Ø86.5 mm) and ND25FN-4 cutout (Ø41 mm per datasheet).
+8. Confirm 3D-printed panel or insert for the inlet (1 to 2 mm thick, required by the 723W).
+9. Confirm the IRM-60-24ST mounting method and footprint (screw-terminal version is 109 × 52 × 33.5 mm) fits the enclosure.

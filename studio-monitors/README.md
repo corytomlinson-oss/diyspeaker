@@ -25,9 +25,9 @@ A learning project: a pair of small DIY two-way active studio monitors, inspired
 2. Pico 2 running DSPi: matrix mixing, PEQ, crossover, delay, output gain.
 3. Stereo I2S DAC (PCM5102 class), one channel per driver.
 4. TPA3116D2 class D amplifier (2 × 50 W board), one channel per driver, 26 dB gain.
-5. Mean Well EPS-65-24-C enclosed Class I power supply (24 V, 2.71 A).
+5. Mean Well IRM-60-24ST screw-terminal Class II power supply (24 V, 2.5 A, 60 W, single output).
 
-The PSU is Class I, so the IEC earth must be bonded to the chassis. Signal ground stays separate.
+The PSU is Class II (no FG pin), so it needs no earth bond to the enclosure. The panel inlet's earth terminal is not used by the PSU. Signal ground stays separate. The PSU was switched from the EPS-65-24-C (Class I, JST connectors, 2.71 A) to the IRM-60-24ST: it has screw terminals, lower ripple (150 mVp-p vs 240 mVp-p), and is easier to source outside Digi-Key. Its 2.5 A output is slightly below the EPS-65's 2.71 A, which is still enough for this design.
 
 ## Drivers
 
@@ -88,7 +88,7 @@ Prices are rough. Verify before purchase.
 3. Confirm the Peerless and ND25FA-4 cutout diameters from the official drawings. The ND25FA-4 is listed at Ø45 mm. The Peerless drawing appears to show about Ø86.5 mm, which is hard to read and needs confirming. The Peerless is about 76 mm deep, so check that it leaves room for the amp and PSU inside the box.
 3a. Decide whether the tweeter gets a waveguide, and if so design it into the baffle, with time alignment in DSPi.
 4. Confirm the ND25FA-4 frequency response and the ND91-4 response in the box with measurements.
-5. Check the EPS-65 and PCM1808 board dimensions against the enclosure.
+5. Check the IRM-60-24ST (109 × 52 × 33.5 mm, screw-terminal version) and PCM1808 board dimensions against the enclosure.
 6. TPA3116D2 input sensitivity and DSPi output gain, to avoid clipping.
 7. Crossover check with measurements, and tweeter level match.
 
@@ -102,7 +102,7 @@ Prices are rough. Verify before purchase.
 - PCM5102 DAC: Adafruit (price).
 - Raspberry Pi Pico 2: Core Electronics (price).
 - PCM1808 board: Fruugo (price, currency not confirmed).
-- EPS-65-24-C: TRC Electronics (price).
+- Mean Well IRM-60-24ST: Mean Well IRM-60 spec sheet (attached PDF, 2025-11-21), Master Electronics listing (about $17.30 USD, price to re-check).
 - Bambu Lab X1C build volume: MakeItLabs wiki (256 × 256 × 256 mm).
 - DSP: WeebLabs DSPi (github.com/WeebLabs/DSPi).
 
