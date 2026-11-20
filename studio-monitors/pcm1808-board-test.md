@@ -187,7 +187,11 @@ Meter: AstroAI AM33D. Probes: black in COM, red in VΩmA. Ohms range 20K. Contin
 - **Bottom tab to GND (both GND pads):** overload ("1").
 - **Resistor's right end to GND:** overload ("1").
 
-**Conclusion:** the 10 kΩ resistor isn't a shunt from the input to ground on this board, which doesn't match the seller's listing. The static test is inconclusive on the 159 Hz filter as a whole: it rules out the shunt layout described in the listing, but not every other filter arrangement. The functional test (Part 2) is what decides whether the filter is there. Don't rework the board until that test is done.
+- **Ground-side pad of the capacitor under the 103 resistor (left pad) to GND:** 0.00 (ground net).
+- **Right pad of that capacitor to GND:** overload ("1"). Expected for a capacitor, which blocks DC.
+- **Right pad of that capacitor to one end of the 103 resistor (the end nearest it):** beeps. They share a node.
+
+**Conclusion (revised):** The layout matches the listing's low-pass filter: the 10 kΩ resistor (103) in series from the input node, then the capacitor under it from the filter node to ground. The capacitor's value (0.1 µF) is not measured, because the AM33D has no capacitance setting. The 1 MΩ resistor (105) is still unidentified and is a possible bias resistor. The functional test (Part 2) confirms the filter's behavior. Don't rework the board until that test is done.
 
 **Note on the series capacitor:** The large electrolytic can under RIN is the series coupling capacitor. Its top tab is on the RIN net and its bottom tab is on the chip side. A capacitor blocks DC, so RIN-to-GND readings will be open even when a shunt exists on the chip side. Use the beeper to trace nets, and the ohms setting to measure resistors. Never remove this capacitor.
 
