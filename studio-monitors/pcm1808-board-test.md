@@ -79,7 +79,7 @@ Interpret the reading:
 |---|---|
 | About 10 kΩ | The 10 kΩ resistor is probably connected from RIN to ground. This matches the seller's claim. |
 | Much lower than 10 kΩ (for example, a few hundred ohms) | Something else is loading the input. Check for solder bridges or other connections. |
-| Open, or "OL" (overload) on the meter | There is no path from RIN to ground. The 10 kΩ resistor may be in a different place or missing. |
+| Open, or "OL" (overload) on the meter | There is no path from RIN to ground. This is expected if a series coupling capacitor sits between RIN and the chip (see the note under "Board 1 findings" below). Otherwise, the 10 kΩ resistor may be in a different place or missing. |
 
 A reading of about 10 kΩ doesn't prove the filter is there, because the capacitor blocks DC. It only shows that the resistor path is present.
 
@@ -173,6 +173,23 @@ Compare 1 kHz and 10 kHz:
 Repeat the test on the second channel (LIN) if you can, and note whether the two channels match.
 
 ---
+
+### Board 1 findings (static, 2026-11-20)
+
+Meter: AstroAI AM33D. Probes: black in COM, red in VΩmA. Ohms range 20K. Continuity beep tested OK.
+
+- **Probe check:** Probe tips touching gave near 0 once the battery was replaced. Meter and probes confirmed working.
+- **103 resistor, across its own two ends:** about 9.9 kΩ, matching the 103 code (10 kΩ).
+- **RIN pad to GND (both GND pads):** overload ("1"). This is consistent with a series coupling capacitor between RIN and the chip, because a capacitor blocks DC.
+- **Top tab of the top-left electrolytic can (the one under RIN) to RIN pad:** beeps. The can's top side is on the RIN net.
+- **Bottom tab of the same can to the resistor's left end (the end nearest the tab):** beeps. The bottom tab is on the chip side of the capacitor.
+- **Resistor's right end to the bottom tab:** no beep. Expected, since a resistor isn't a wire.
+- **Bottom tab to GND (both GND pads):** overload ("1").
+- **Resistor's right end to GND:** overload ("1").
+
+**Conclusion:** the 10 kΩ resistor isn't a shunt from the input to ground on this board, which doesn't match the seller's listing. The static test is inconclusive on the 159 Hz filter as a whole: it rules out the shunt layout described in the listing, but not every other filter arrangement. The functional test (Part 2) is what decides whether the filter is there. Don't rework the board until that test is done.
+
+**Note on the series capacitor:** The large electrolytic can under RIN is the series coupling capacitor. Its top tab is on the RIN net and its bottom tab is on the chip side. A capacitor blocks DC, so RIN-to-GND readings will be open even when a shunt exists on the chip side. Use the beeper to trace nets, and the ohms setting to measure resistors. Never remove this capacitor.
 
 ## Part 3: Test log
 
