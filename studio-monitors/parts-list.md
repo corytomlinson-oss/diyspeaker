@@ -9,7 +9,7 @@ Status key: **Chosen** = decided, **Verify** = needs a check before ordering.
 | Item | Qty | Price (approx.) | Where | Status |
 |---|---|---|---|---|
 | Peerless SLS-85S25CP04-04 woofer (3.5", 4 Ω) | 2 | $21.00 each | [Parts Express](https://www.parts-express.com/Peerless-SLS-85S25CP04-04-3-1-4-Paper-Cone-Woofer-4-Ohm-264-1600?quantity=1) (back-ordered about 2 weeks) | Chosen. Datasheet on file. |
-| Dayton ND25FN-4 tweeter (1" silk dome, faceplate-free) | 2 | $11.00 each | Parts Express (link not saved) | Chosen |
+| Peerless by Tymphany XT25SC40-04 tweeter (1" ring radiator, faceplate-free, 4 Ω) | 2 | $18.00 each | [Parts Express 264-1642](https://www.parts-express.com/Peerless-XT25SC40-04-1-Ring-Radiator-XT-Tweeter-4-Ohm-264-1642?quantity=1) | Chosen. Spec sheet on file. Replaced the ND25FN-4 (out of stock). |
 | PCM1808 ADC module | 2 | Not verified | Amazon listing (link not saved) | Verify the input filter before use (see `pcm1808-board-test.md`) |
 | Raspberry Pi Pico 2 | 2 | ~$5 each | Not verified | Verify |
 | PCM5102 I2S DAC breakout (Adafruit 6250 listing) | 2 | $4.95 each | [Adafruit](https://www.adafruit.com/product/6250) | Chosen |
@@ -64,6 +64,6 @@ Status key: **Chosen** = decided, **Verify** = needs a check before ordering.
 4. US Digi-Key pricing for the TSR 3-2450N.
 5. Raspberry Pi Pico 2 source and price.
 6. Wire and terminal part numbers (screw-terminal ferrules, 18 AWG).
-7. Peerless cutout diameter (drawing appears to show about Ø86.5 mm) and ND25FN-4 cutout (Ø41 mm per datasheet).
+7. Peerless cutout diameter (drawing appears to show about Ø86.5 mm) and XT25SC40-04 front diameter (about Ø44 mm) and depth (about 20.8 mm body, 32.6 mm overall), read from a small drawing.
 8. Confirm 3D-printed panel or insert for the inlet (1 to 2 mm thick, required by the 723W).
 9. Confirm the IRM-60-24ST mounting method and footprint (screw-terminal version is 109 × 52 × 33.5 mm) fits the enclosure.

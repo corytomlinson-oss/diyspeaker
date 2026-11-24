@@ -34,17 +34,18 @@ The PSU is Class II (no FG pin), so it needs no earth bond to the enclosure. The
 | Role | Part | Key specs | Price |
 |---|---|---|---|
 | Woofer | Peerless SLS-85S25CP04-04 (3.5" paper cone) | Fs 72.6 Hz, Qts 0.35, Vas 1.39 L, Xmax 4.5 mm, 83.3 dB at 1 W / 1 m, 86.0 dB at 2.83 V, 30 W RMS | $21.00 |
-| Tweeter | Dayton ND25FN-4 (1" silk dome, faceplate-free) | Fs 1,350 Hz, Qts 1.56, 90 dB at 2.83 V, 20 W RMS, Ø41 mm cutout, 21 mm deep, smooth on-axis 2 to 10 kHz | $11.00 |
+| Tweeter | Peerless by Tymphany XT25SC40-04 (1" ring radiator, faceplate-free) | Fs 1,018 Hz (±15%), Qts 0.63, Re 3.22 Ω, Zmin 3.79 Ω, Le 0.01 mH, Sd 8 cm², Xmax 0.1 mm, 91.1 dB at 2.83 V, 87.9 dB at 1 W / 1 m, 100 W rated noise power. Front about Ø44 mm, body about 20.8 mm behind the mounting face, about 32.6 mm overall including the phase plug (read from a small drawing, confirm on the part). | $18.00 |
 
-The tweeter is locked in for a baffle-mounted waveguide. Designed for custom mounting, so the front stays flat for the waveguide.
+The tweeter is locked in for a baffle-mounted waveguide. It ships without a faceplate for custom mounting. Its "central waveguide" is the bullet-shaped phase plug in the middle of the ring diaphragm, not an outer flare, so the whole waveguide is still ours to design; the throat must clear the phase plug. The Voz Pacifica build (a4eaudio.com) uses this tweeter in a Visaton WG 148 R waveguide, which shows the approach works. Xmax is tiny (0.1 mm, normal for ring radiators), so keep the crossover at about 3 kHz and don't go much below 2.5 kHz. The tweeter is about 5 dB more sensitive than the woofer, so attenuate it in DSPi. At 91 dB, amp hiss may be audible near-field; lower the TPA3116D2 gain setting if so.
 
-**Crossover:** 4th-order Linkwitz-Riley at about 2.5 to 3 kHz, set in DSPi. Start at 3 kHz. The 3.5" woofer will be near its limit at 2.5 kHz, and the tweeter's usable range starts at 2.5 kHz.
+**Crossover:** 4th-order Linkwitz-Riley at about 2.5 to 3 kHz, set in DSPi. Start at 3 kHz (about 3× the tweeter's Fs). The 3.5" woofer will be near its limit at 2.5 kHz, and the tweeter's tiny Xmax sets a floor around 2.5 kHz.
 
 **Previously considered:**
 - Dayton ND91-4 (3.5" full-range, $27.98): Very close on paper to the Peerless, but about $7 more per speaker. Replaced by the Peerless.
 - MAC-04 (4" midrange): Dropped for the 3.5" ND91-4. Its official datasheet was not accessible, and its Xmax (3 mm, from the overhang figure) was lower than the ND91-4's 4.6 mm.
 - SB12NRXF25-4 (4"): Discontinued from the standard range (OEM only, MOQ 100).
 - Tang Band W4-1720 (4"), Dayton SIG120-4 (4"), SB12PACR25-4 (4"): Viable, but larger than the reference box.
+- Dayton ND25FN-4 (1" silk dome, $11): The previous choice. Replaced by the XT25SC40-04 because it went out of stock for a long time. The XT25 also has a lower Fs (1,018 vs 1,350 Hz) and far higher power handling (100 W vs 20 W), at $7 more per speaker.
 - Dayton TD25F-4 (1" tweeter, about $23): Replaced by the ND25FA-4 at lower cost.
 - ND20FB-4 (¾" tweeter, about $14): Usable, but its Fs (1.7 to 2.1 kHz) and lower power rating made the ND25FA-4 the better fit.
 
@@ -53,12 +54,12 @@ The tweeter is locked in for a baffle-mounted waveguide. Designed for custom mou
 | Item | Cost |
 |---|---|
 | Woofer, Peerless SLS-85S25CP04-04 | $21.00 |
-| Tweeter, ND25FN-4 | $11.00 |
+| Tweeter, XT25SC40-04 | $18.00 |
 | Electronics (ADC, Pico 2, DAC, amp, PSU) | ~$52 |
 | Filament and misc. hardware (IEC inlet, RCA jack, wire, fasteners, damping) | ~$20–35 |
-| **Total** | **~$104–119** |
+| **Total** | **~$111–126** |
 
-For the pair: roughly $210 to $240 before shipping and tax. An earlier version of this table counted the MAC-04 woofer twice, so the total was overstated by about $20 per speaker. This corrects it. The filament and misc. line is an estimate.
+For the pair: roughly $222 to $252 before shipping and tax. The tweeter switch to the XT25SC40-04 added $7 per speaker. An earlier version of this table counted the MAC-04 woofer twice, so the total was overstated by about $20 per speaker. This corrects it. The filament and misc. line is an estimate.
 
 ## Measurement gear (to purchase)
 
@@ -83,11 +84,11 @@ Prices are rough. Verify before purchase.
 
 1. WinISD sealed-box run at 1.5 L with the Peerless parameters.
 0a. Test the PCM1808 board's input filter (static and functional). Step-by-step guide: studio-monitors/pcm1808-board-test.md.
-1a. Design the baffle waveguide for the ND25FN-4: throat to dome, mouth size for a 2.5 to 3 kHz crossover, and mounting clips or plate.
+1a. Design the baffle waveguide for the XT25SC40-04: throat matched to the ring diaphragm and clearing the phase plug, mouth size for a 3 kHz crossover, and a mounting method (printed clamp ring, bolted plate, or glued pocket).
 2. CAD enclosure at about 165 × 114 × 127 mm, with the internal volume checked and the driver cutouts placed.
-3. Confirm the Peerless and ND25FA-4 cutout diameters from the official drawings. The ND25FA-4 is listed at Ø45 mm. The Peerless drawing appears to show about Ø86.5 mm, which is hard to read and needs confirming. The Peerless is about 76 mm deep, so check that it leaves room for the amp and PSU inside the box.
+3. Confirm the Peerless woofer cutout and the XT25SC40-04 front diameter (about Ø44 mm) and depths on the actual parts. The Peerless drawing appears to show about Ø86.5 mm, which is hard to read and needs confirming. The Peerless is about 76 mm deep, so check that it leaves room for the amp and PSU inside the box.
 3a. Decide whether the tweeter gets a waveguide, and if so design it into the baffle, with time alignment in DSPi.
-4. Confirm the ND25FA-4 frequency response and the ND91-4 response in the box with measurements.
+4. Confirm the XT25SC40-04 response in the waveguide and the woofer response in the box with measurements.
 5. Check the IRM-60-24ST (109 × 52 × 33.5 mm, screw-terminal version) and PCM1808 board dimensions against the enclosure.
 6. TPA3116D2 input sensitivity and DSPi output gain, to avoid clipping.
 7. Crossover check with measurements, and tweeter level match.
@@ -96,7 +97,7 @@ Prices are rough. Verify before purchase.
 
 - Peerless SLS-85S25CP04-04: Tymphany driver spec sheet (attached PDF, rev 1, 2017), Parts Express (price, $21 from user).
 - ND91-4: loudspeakerdatabase.com listing and Parts Express (price).
-- ND25FA-4: Parts Express listing (specs and price).
+- XT25SC40-04: Tymphany driver spec sheet (attached PDF, rev 1, 2017-03-03), Parts Express (price, $18 from user). Voz Pacifica design, a4eaudio.com (waveguide use reference).
 - Passive Aggressive Mini kit (box size reference): Parts Express.
 - TPA3116D2 board: Parts Express (price).
 - PCM5102 DAC: Adafruit (price).
