@@ -31,7 +31,8 @@ Status key: **Chosen** = decided, **Verify** = needs a check before ordering.
 |---|---|---|---|
 | 18 AWG stranded wire, red, black, and green | 1 roll each | Mains live and neutral (inlet to PSU), 24 V and ground runs. Green is only needed if you bond the inlet's earth terminal to something. | Verify |
 | Ring or spade terminals for the IRM-60 screw terminals, sized for 18 AWG, with insulating sleeves | 1 kit | Mains L and N into the PSU, DC +24 V and −V out. | Verify |
-| Panel-mount RCA jack | 2 | One per speaker | Verify |
+| Panel-mount RCA jack | 2 | One per speaker. Buying from Amazon. | Chosen (source: Amazon) |
+| Driver gasket tape (thin foam) | 1 roll | Seals the woofer and tweeter to the printed baffle so the sealed box doesn't leak. | Have it already |
 | Shielded signal wire, 24 AWG | 1 roll | RCA to ADC, DAC to amp | Verify |
 | Spade terminals, 0.187" with insulating sleeves | 1 kit | Speaker connections | Verify |
 | 2.54 mm headers (female and male) | 1 set | Pico and boards | Verify |
