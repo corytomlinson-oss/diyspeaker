@@ -50,7 +50,7 @@ Status key: **Chosen** = decided, **Verify** = needs a check before ordering.
 
 | Item | Price (approx.) | Notes |
 |---|---|---|
-| miniDSP UMIK-1 calibrated measurement mic | $75 to $90 | Includes a calibration file |
+| miniDSP UMIK-1 calibrated measurement mic | About $140 at Parts Express (free shipping, 15% coupon) | Ordering with the drivers and amps. Download the 0-degree calibration file by serial number. |
 | 3.5 mm to RCA cable | Local | Computer output to the speaker's RCA input for REW sweeps |
 | USB audio interface, 2-in / 2-out (Behringer UMC202HD) | $50 to $70 | Optional, buy later if needed. Adds a loopback timing reference, impedance measurements, and direct electronics measurements. |
 | Multimeter | ~$20 | Resistance and voltage |
