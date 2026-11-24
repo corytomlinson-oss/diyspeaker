@@ -64,7 +64,8 @@ For the pair: roughly $222 to $252 before shipping and tax. The tweeter switch t
 ## Measurement gear (to purchase)
 
 - **Calibrated measurement mic:** miniDSP UMIK-1 (roughly $75 to $90). The calibration file ships with each unit.
-- **USB audio interface:** 2 in / 2 out, such as the Behringer UMC202HD (roughly $50 to $70).
+- **3.5 mm to RCA cable:** carries REW's test signals from the computer's headphone or line output to the speaker's RCA input.
+- **USB audio interface (optional, buy later if needed):** 2 in / 2 out, such as the Behringer UMC202HD (roughly $50 to $70). Not needed to start, because the UMIK-1 is a USB mic. It adds a loopback timing reference for accurate tweeter-to-woofer delay, impedance measurements (with a resistor jig), and direct DAC or amp measurements. Without it, use REW's acoustic timing reference with the second speaker as the reference.
 - **REW (Room EQ Wizard):** free. Frequency response, impedance, distortion, and gating.
 - **Multimeter:** for resistance and wiring checks.
 - **Mic stand and tape measure:** for consistent 1 m on-axis placement.

@@ -32,7 +32,7 @@ A DIY two-way active studio monitor built by Cory as a learning project, inspire
 - Enclosure: sealed, 3D-printed, reference size about 165 × 114 × 127 mm, net volume target about 1.5 L.
 - Estimated cost: about $111 to $126 per speaker (parts about $91, plus filament and misc.).
 - Open: WinISD run at 1.5 L, CAD enclosure, Peerless woofer cutout and XT25SC40-04 mounting dimensions, Peerless depth versus internal space, board dimensions, amp input level and DSPi output gain, crossover measurements, tweeter waveguide design.
-- Measurement gear to buy: UMIK-1 mic, USB interface, multimeter, mic stand. REW and WinISD are free.
+- Measurement gear to buy: UMIK-1 mic, 3.5 mm to RCA cable, multimeter, mic stand. USB interface is optional (timing loopback, impedance); use REW's acoustic timing reference instead. REW and WinISD are free.
 
 ## Files
 
